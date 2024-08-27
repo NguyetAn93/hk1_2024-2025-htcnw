@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0px; margin: 0px auto;}
+        .wrapper{
+            height: 800px;
+            width: 1080px;
+            background-color: rgb(255, 255, 255);
+        }
+        nav{
+            height: 30px;
+            width: 1080px;
+            background-color: rgb(255, 254, 254);
+        }
+        header{
+            height: 60px;
+            width: 1080px;
+            background-color: rgb(34, 54, 233);
+        }
+        .content{
+            height: 560px;
+            width: 1080px;
+            background-color: rgb(255, 255, 255);
+        }
+        footer{
+            height: 150px;
+            width: 1080px;
+            background-color: rgb(39, 36, 32);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="http://">Home</a></li>
+                <li><a href="http://">Product</a></li>
+                <li><a href="http://">Chill</a></li>
+                <li><a href="http://">Question</a></li>
+            </ul>
+        </nav>
+        <header></header>
+        <div class="content">
+            <div id="menu-left"></div>
+            <div class="content-left"></div>
+            <div id="content-right"></div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
