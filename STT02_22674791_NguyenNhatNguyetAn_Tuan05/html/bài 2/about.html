@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="./css/bootstrap.css"></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container" style="background-color: rgb(51, 51, 59); height: 600px;">
+        <div class="row">
+          <nav class="navbar navbar-expand-sm navbar-dark"  style="background-color: black;">
+            <div class="container-fluid">
+              <a class="navbar-brand me-5 ms-5" style="font-family: woff; font-style: italic;" href="home.html">Feane</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-5 ms-5">
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./home.html">HOME</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./menu.html">MENU</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./book.html">BOOK TABLE</a>
+                  </li>
+                  <li class="ms-5 ms-5">
+                  <i class="material-icons m-1" style="color: white;">person</i>
+                  <i class="material-icons m-1" style="color: white;">shopping_cart</i>
+                  <ia class="material-icons m-1" style="color: white;">search</ia>
+                </li>
+                </ul>
+                <form class="d-flex">
+                  <div id="noidung">
+              <button type="button" class="btn btn-warning rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal">
+                  ORDER NOW!
+                </button>
+              </div>
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title text-warning">Order</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                       
+                         <!-- Modal -->
+                            <form>
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">Telephone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                      </div>
+                      <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="checkmeout">
+                        <label class="form-check-label" for="checkmeout">Check me out</label>
+                      </div>
+                    </form>
+                      </div>
+                
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning" data-bs-dismiss="modal">Order</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                      </div>
+                      </div>
+                  </div>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-6 mb-5">
+                <img src="./images/about-img.png" alt=""style=" width: 300px;height: 400px; position: relative; top: 30px;left: 150px;">
+            </div>
+            <div class="col-6 text-light" style="position: absolute;top: 200px; right: 80px; width: 600px;"> 
+              <h2>We are Feane</h2>
+              <p>Our commitment to quality starts with using the freshest ingredients, from locally sourced vegetables to premium cuts of meat. We understand the need for quick service, so we've streamlined our ordering process to get your food to you in minutes, whether you're dining in or taking out.</p>
+              <form class="d-flex">
+                <button class="btn btn-warning rounded-pill text-light" type="button">See More!</button>
+              </form>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

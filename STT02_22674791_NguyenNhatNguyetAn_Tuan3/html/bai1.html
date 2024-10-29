@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin: auto;
+    background-color: rgb(135, 213, 238);
+    width: 100%;
+    width: 1200px;
+    box-shadow: 0 0 15px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+  
+}
+li{
+    display: inline-flex;
+    color: aliceblue;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 60px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header h2{
+    margin-right: 15px;
+color: #FFFFFF;
+text-shadow: 0px 0px 10px blue;
+color: #FFFFFF;
+/* text-shadow: #FFF 0px 0px 0px, #FFF 0px 0px 3px, #FFF 0px 0px 15px, #1a55c9 0px 0px 10px, #1a55c9 0px 0px 10px, #1a55c9 0px 0px 15px, #1a55c9 0px 0px 5px, #1a55c9 0px 0px 10px; */
+
+}
+.header{
+    border-bottom:5px dotted  #FFFFFF;
+}
+.nav{
+    display: flex;
+    width: 100%;
+}
+.right{
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+img{
+    margin-top: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+}
+.right h2 {
+    color: #231ce3;
+    text-shadow: 1px 2px #FFF;
+    padding-left: 40px;
+    
+}
+.right1 {
+    color: #2244c9;
+    margin-top: -15px;
+    margin-left: 50px;
+    opacity: 0.8;
+   font-weight: bold;
+    
+}
+.form{
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #FFF;
+}
+
+.item3  td{
+    
+    width: 160px;
+    
+}
+.item3 input{
+    border-radius:5px ;
+    padding-right: 70px;
+    border: 2px solid #1a55c9;
+    
+  
+}
+select {
+    border-radius: 5px;
+    border: 2px solid #1a55c9;
+}
+textarea{
+    border-radius: 5px;
+    border: 2px solid #1a55c9;
+}
+button{
+    border-radius: 5px;
+    border: 3px dotted #1a55c9;
+    
+}
+.nav{
+    border-bottom: 5px dotted #FFF;
+}
+.footer{
+    padding-top: 20px;
+    text-align: center;
+    color: #FFF;
+    height: 70px;
+    
+}
+.footer p {
+    margin-top: 0px;
+}
+.footer i {
+    font-weight: bold;
+}
+.footer span{
+    font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul>
+          <li>Home</li>
+          <li>Products</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <h2>SKY World</h2>
+      </div>
+      <div class="nav">
+        <div class="form">
+            <h1>Registration Information</h1>
+            <p>
+                Start your travel planning now with our on-line tour regstration
+                form. Just tell us a little about yourself and your group and one of our travel
+                experts will contact  you  to create the perfect custom built for your group's needs .
+                Your've arrived.                
+            </p>
+            <div class="item3">
+            <form action="">
+              <table >
+                <tr >
+                    <td>
+                    <label for="">Title</label>
+                      <td  >
+                        <select name="" id="">
+                          <option >Mr.</option>
+  
+                        </select>
+                      </td>
+                    </td>
+              </tr>
+              <tr>
+               
+                  <td><label for="">Full Name *</label></td>
+                  <td>
+                  <input type="text" placeholder="First Name">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="">Mailing Address</label>
+                </td>
+                <td>
+                  
+                  <input type="text " placeholder="Mailing Address">
+                </td>
+              </tr>
+            <tr>
+              <td>
+                <label for=""> City </label>
+              </td>
+             
+              <td>
+              <input type="text" placeholder="City">
+              </td>
+            </tr>
+          <tr>
+            <td><label for=""> Country</label></td>
+            <td>
+             
+              <input type="text" placeholder="Country">
+            </td>
+          </tr>
+          <tr>
+            <td><label for=""> Specific questions or  required about your tour</label></td>
+            <td>
+             
+              <textarea  name="" id="" cols="30" rows="10" placeholder="Specific questions or required about your tour"></textarea>
+            </td>
+            
+          </tr>
+          <div class="item4">
+          <tr>
+            <td></td>
+            
+              <td>
+                <button>Submit</button>
+                <button>Reset</button>
+               
+              </td>
+           
+          
+          </tr>
+        </div>
+               </table>
+            </form>
+            </div>
+          </div>
+        <div class="right">
+          <img src="../img/sky.jpg">
+          <h2>Your've arrived.</h2>
+          <p class="right1"> Journeys as great as the destinations</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>&COPY;2016 Sky World Tours. All rights reserved.</span>
+        <p>Contact information: <i>Student Name | Student ID |</i> Testing date: <i></p>
+      </div>
+    </div>
+  </body>
+</html>

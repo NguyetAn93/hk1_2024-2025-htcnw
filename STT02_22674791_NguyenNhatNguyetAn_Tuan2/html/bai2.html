@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoko's Kitchen</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            padding: 0;
+            width: 1000px;
+            height: 900px; 
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(156, 153, 148, 1);
+            position: relative;
+            text-align: left; 
+        }
+        header img {
+            position: absolute;
+            top: 5px;
+            left: 10px; 
+            max-width: 80px; 
+        }
+        header h1 {
+            position: absolute;
+            top: 30px;
+            left: 100px; 
+            font-size: 24px;
+            margin: 0; 
+            color: white;
+        }
+        header h3 {
+            position: absolute;
+            top: 60px;
+            left: 100px;
+            font-size: 18px; 
+            margin: 0;
+            color: white;
+        }
+        .nav {
+            width: 100%;
+            background-color: rgb(134, 132, 132);
+            padding: 10px 0;
+        }
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0px;
+        }
+        .nav li {
+            margin: 0px 10px ; 
+        }
+        .nav a {
+            text-decoration: none; 
+            color: white; 
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); 
+        }
+        content {
+            width: 100%;
+            height: 500px;
+            display: flex; 
+            justify-content: space-between; 
+        }
+        .left, .right {
+            width: 50%; 
+            height: 500px; 
+            background-color: #f4f4f4; 
+            padding: 10px 10px;
+        }
+        .left {
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo chiều dọc */
+            gap: 20px; /* Khoảng cách giữa các khóa học */
+            border-right: 1px black solid;
+        }
+        
+        .course {
+            display: flex; /* Sử dụng flexbox cho mỗi khóa học */
+            align-items: center; /* Căn giữa theo chiều dọc */
+        }
+        
+        .course img {
+            margin-right: 15px; /* Khoảng cách giữa ảnh và thông tin */
+        }
+
+        .course-info {
+            max-width: 60%; /* Đặt chiều rộng tối đa cho phần thông tin */
+        }
+        .right .right1{
+            color: red;
+            padding: 0px;
+            
+        }
+        footer {        
+            width: 100%;
+            height: 50px;
+            background-color: rgba(156,153,148, 1);
+            line-height: 50px; /* Căn giữa nội dung trong footer */
+            margin-top: 20px; /* Khoảng cách giữa content và footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../image/logo.png" alt="Logo">
+            <h1>YOKO'S KITCHEN</h1>
+            <h3>JAPANESE COOKING CLASSES</h3>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Catering</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <content>
+            <div class="left">
+                <div class="course">
+                    <img src="../image/cai.png" width="290px" height="190px" alt="Japanese Vegetarian">
+                    <div class="course-info">
+                        <h3  style="color: black;">Japanese Vegetarian</h3>
+                        <h3  style="color: red;">Five week course in London</h3>
+                        <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+                    </div>
+                </div>
+                
+                <div class="course">
+                    <img src="../image/teriyaki.jpg" alt="Sauces Masterclass">
+                    <div class="course-info">
+                        <h3 style="color: black;">Sauces Masterclass</h3>
+                        <h3 style="color: red;">One day workshop</h3>
+                        <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h1 class="right1">Popular Recipies</h1>
+                <h3 class="right1">Yakitori (grilled chicken)</h3>
+                <hr>
+                <h3 class="right1">Tsukune (minced chicken patties)</h3>
+                <hr>
+                <h3 class="right1">Okonomiyaki (savory pancakes)</h3>
+                <hr>
+                <h3 class="right1">Mizutaki (chicken stew)</h3>
+                <hr>
+                <h1 class="right1">Contact</h1>
+                <p class="right1" style="color: black;">Yoko's Kitchen<br>
+                    27 Redchurch Street<br>
+                    Shoreditch<br>
+                    London E2 7DP
+                </p>
+            </div>
+        </content>
+        <footer>
+            &copy; 2010 Yoko's Kitchen
+        </footer>
+    </div>
+</body>
+</html>

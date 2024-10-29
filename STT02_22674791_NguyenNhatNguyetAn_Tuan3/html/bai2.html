@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+a {
+    text-decoration: none;
+}
+/* Header */
+.header {
+    background-color: #294E79;
+    height: 120px;
+}
+.inner-wrap {
+    padding-top: 10px;
+    display: flex;
+}
+.header .inner-img{
+    width: 40%;
+}
+.header .inner-right {
+    width: 60%;
+    text-align: end;
+    margin-right: 30px;
+}
+.header .inner-right .inner-search input {
+    background-color: #1C3451;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #4274B0;
+}
+.header .inner-right .inner-search input::placeholder{
+    color: #ffffff;
+}
+.header .inner-img img {
+    width: 300px;
+    height: auto;
+}
+.header .inner-right .inner-search a {
+    width: 40px;
+    height: 37px;
+    border: 1px solid #4274B0;
+    color: #fff;
+    padding: 3px;
+    margin-left: 10px;
+    background-color: #1C3451;
+}
+.header .inner-right .inner-search {
+    margin-bottom: 30px;
+}
+.header .inner-menu ul li{
+    display: inline-flex;
+}
+
+.header .inner-menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #3D73B1;
+    padding: 12px 25px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* End Header */
+/* Main */
+.main .inner-contact {
+    width: 70%;
+    padding: 30px 10px;
+}
+.main .inner-title{
+    border-bottom: 2px dashed;
+    font-style: normal;
+    padding-bottom: 15px;
+}
+.main .inner-det {
+    width: 100%;
+    display: flex;
+}
+.main .inner-left {
+    margin-right: 50px;
+    width: 70%;
+}
+.main .inner-right {
+    width: 40%;
+}
+#shadow {
+    width: 100%;
+    max-width: 475px;
+    text-shadow: 0 5px 5px yellowgreen;
+    color: red;
+}
+.main .inner-form nav {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 45%;
+}
+.main .inner-form nav label {
+   width: 100%;
+   display: block;
+}
+.main .inner-form nav input {
+    width: 212px;
+    background-color: #F7F7F7;
+    border: #E7E7E7 1px solid;
+}
+.main .inner-form textarea {
+    background-color: #F7F7F7;
+    border: #E7E7E7 1px solid;
+}
+.main .inner-form input[type=submit] {
+    margin-top: 10px;
+}
+.desc-details-1 {
+    margin-bottom: 25px;
+}
+.inner-discount{
+    width: 400px;
+    background-color: #afabab;
+    height: auto;
+    padding-left: 20px;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #06182f;
+
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-img">
+                    <img src="../img/logo.png" alt="">
+                </div>
+                <div class="inner-right">
+                    <div class="inner-search">
+                        <input type="text" placeholder="Search the site...">
+                        <a href="#">GO</a>
+                    </div>
+                    <div class="inner-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Promotion</a></li>
+                            <li><a href="#">Gift Baskets</a></li>
+                            <li><a href="#">Flower Services</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <div class="main">
+        <div class="container">
+            <div class="inner-wrap"> 
+                <div class="inner-contact">
+                    <h3 class="inner-title">Why Not Contact Us Today!</h3>
+                    <div class="inner-det">
+                        <div class="inner-left">
+                            <p id="shadow">For FlowerBox 360 shopper that means not only can you send your friends and loved ones the highest quality flowers found on online, but that you can do so at a great value.</p>
+                            <div class="inner-form">
+                                <form action="">
+                                    <nav>
+                                    <label for="name">Name:</label>
+                                    <input type="text"> 
+                                    </nav>
+                                    <nav>
+                                    <label for="email">Email:</label>
+                                    <input type="email">
+                                    </nav>
+                                    <nav>
+                                    <label for="tel">Telephone:</label>
+                                    <input type="tel">
+                                    </nav>
+                                    <nav>
+                                    <label for="sub">Subject:</label>
+                                    <input type="text">
+                                    </nav>
+                                    <label for="mess">Message:</label><br>
+                                    <textarea name="" id="" cols="60" rows="8"></textarea>
+                                    <br>
+                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Reset">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="inner-right">
+                            <div class="inner-desc">
+                                <h3 class="inner-title">FlowerBox 360 Info!</h3>
+                                <div class="desc-details-1">
+                                    <span>Operating Hours:</span>
+                                    <br>
+                                    <span>Monday-Friday: 9.00am-5.00pm.</span>
+                                    <br>
+                                    <span>Saturday: 9.00am-1.00pm.</span>
+                                    <br>
+                                    <span>Sunday: Closed (No Deliveries)</span>
+                                    <br>
+                                    <span>ORDER ONLINE 24/7</span>
+                                </div>
+                                <div class="desc-details-2">
+                                    <span>Software Engineering Dept.</span>
+                                    <br>
+                                    <span>Information Technology Falcuty First Flor, H Building</span>
+                                    <br>
+                                    <br>
+                                    <span>12 Nguyen Van Bao St., Ward 4 Go Vap District</span>
+                                    <br>
+                                    <span>Ho Chi Minh City</span>
+                                    <br>
+                                    <span>Tel: 02838940 390</span>
+                                    <br>
+                                    <span>Fax: 0283.9940 954</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-discount">
+                <h3 class="inner-title">Discounts & Specials</h3>
+                <img src="../img/rose.png" style="width: 300px;height: 90px;">
+                <p>FlowerBox 360 offers many great<br>
+                    discounts throught the year,from<br>
+                    coupons and coupon codes, to promo<br>
+                    codes and other savings. We also<br>
+                    offer military flower discounts to our<br>
+                    wonderfull troppps!Read more</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span style="color: white;padding-left: 10px;line-height: 50px;">coppyright&COPY;2017 - all rights reserved -  <a style="color: #3D73B1;">software engineering department - industrial univercity of HO CHI MINH City</a></span>
+    </footer>
+</body>
+</html>

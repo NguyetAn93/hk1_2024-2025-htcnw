@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="./css/bootstrap.css"></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container" style="background-color: rgb(255, 255, 255);">
+        <div class="row">
+          <nav class="navbar navbar-expand-sm navbar-dark"  style="background-color: black;">
+            <div class="container-fluid">
+              <a class="navbar-brand me-5 ms-5" style="font-family: woff; font-style: italic;" href="home.html">Feane</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-5 ms-5">
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./home.html">HOME</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./menu.html">MENU</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="./about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./book.html">BOOK TABLE</a>
+                  </li>
+                  <li class="ms-5 ms-5">
+                  <i class="material-icons m-1" style="color: white;">person</i>
+                  <i class="material-icons m-1" style="color: white;">shopping_cart</i>
+                  <ia class="material-icons m-1" style="color: white;">search</ia>
+                </li>
+                </ul>
+                <form class="d-flex">
+                    <div id="noidung">
+                <button type="button" class="btn btn-warning rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal">
+                    ORDER NOW!
+                  </button>
+                </div>
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title text-warning">Order</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                         
+                           <!-- Modal -->
+                              <form>
+                        <div class="mb-3">
+                          <label for="phone" class="form-label">Telephone</label>
+                          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-check mb-3">
+                          <input type="checkbox" class="form-check-input" id="checkmeout">
+                          <label class="form-check-label" for="checkmeout">Check me out</label>
+                        </div>
+                      </form>
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning" data-bs-dismiss="modal">Order</button>
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="row m-5" style="width: 80%;">
+          <div class="col-6">
+            <h2 class="mb-4">Book A Table</h2>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option selected disabled>How many persons?</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 Persons</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4">4 Persons</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <input type="date" class="form-control" placeholder="DD/MM/YYYY">
+              </div>
+              <button type="submit" class="btn btn-warning rounded-pill text-light" style="width: 150px;">BOOK NOW</button>
+            </form>
+          </div>
+          <div class="col-6">
+            <iframe class="mt-5" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509516!2d144.95373541531643!3d-37.81627927975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779bb8fb7b74b7!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613989766455!5m2!1sen!2sau" 
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+          </div>
+        </div>
+
+    </div>
+</body>
+</html>
