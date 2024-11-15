@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm Tra Thanh Toán | Cửa hàng xe máy trực tuyến</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Kiểm Tra Thanh Toán</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="san-pham.html">Sản Phẩm</a></li>
+                <li><a href="dang-nhap.html">Đăng Nhập</a></li>
+                <li><a href="dang-ky.html">Đăng Ký</a></li>
+                <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                <li><a href="thanh-toan.html">Thanh Toán</a></li>
+                <li><a href="gio-hang.html">Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Hình Ảnh</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Sản phẩm sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="total-price">
+            Tổng Giá: <span id="total-price">0 VNĐ</span>
+        </div>
+
+        <div class="discount-container">
+            <input type="text" id="discount-code" placeholder="Nhập mã giảm giá">
+            <button onclick="applyDiscount()">Áp Dụng</button>
+        </div>
+
+        <div class="checkout-container">
+            <button onclick="proceedToPayment()">Thanh Toán</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Cửa hàng xe máy trực tuyến</p>
+    </footer>
+
+    <script>
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                totalPrice += item.price;
+
+                cartItemsContainer.innerHTML += `
+                    <tr class="cart-item">
+                        <td>
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-image" style="width: 50px; height: auto;">
+                        </td>
+                        <td>${item.name}</td>
+                        <td>${item.price.toLocaleString()} VNĐ</td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString() + ' VNĐ';
+        }
+
+        function applyDiscount() {
+            const discountCode = document.getElementById('discount-code').value;
+
+            alert("Mã giảm giá: " + discountCode + " đã được áp dụng (chức năng chưa được triển khai).");
+        }
+
+        function proceedToPayment() {
+            window.location.href = "thanh-toan.html"; 
+        }
+
+        displayCart();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+section {
+    padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.icon {
+    margin-right: 10px;
+    color: #007bff; 
+}
+
+h2 {
+    font-size: 28px; 
+    margin-top: 20px; 
+}
+
+p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+}

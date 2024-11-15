@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm | Cửa hàng xe máy trực tuyến</title>
+    <link rel="stylesheet" href="css/ctsp.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Chi Tiết Sản Phẩm</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="san-pham.html">Sản Phẩm</a></li>
+                <li><a href="dang-nhap.html">Đăng Nhập</a></li>
+                <li><a href="dang-ky.html">Đăng Ký</a></li>
+                <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                <li><a href="thanh-toan.html">Thanh Toán</a></li>
+                <li><a href="gio-hang.html">Giỏ Hàng</a></li> <!-- Thêm liên kết tới giỏ hàng -->
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="product-detail" id="product-detail">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cửa hàng xe máy trực tuyến</p>
+    </footer>
+
+    <script>
+        const products = [
+            { id: 1, name: "Honda SH350i Xám Đen - Thể Thao", price: 50000000, description: "Xe máy SH350i là sản phẩm chất lượng cao, động cơ mạnh mẽ và tiết kiệm nhiên liệu.", image: "images/xe-may-1.jpg" },
+            { id: 2, name: "KAWASAKI Z400 ABS", price: 750000000, description: "KAWASAKI Z400 là mẫu xe thể thao với thiết kế đẹp mắt và hiệu suất vượt trội.", image: "images/xe-may-2.jpg" },
+            { id: 3, name: "KAWASAKI Z1000 ABS", price: 700000000, description: "KAWASAKI Z1000 mang lại cảm giác lái mạnh mẽ và thú vị trên mọi cung đường.", image: "images/xe-may-3.jpg" },
+            { id: 4, name: "Kawasaki KLX 230", price: 430000000, description: "KLX 230 là xe địa hình hoàn hảo cho những cuộc phiêu lưu.", image: "images/xe-may-4.jpg" },
+            { id: 5, name: "HAYABUSA 1300", price: 610000000, description: "HAYABUSA 1300 là xe mô tô thể thao huyền thoại với tốc độ cao.", image: "images/xe-may-5.jpg" },
+            { id: 6, name: "Honda SH Vetro", price: 150000000, description: "SH Vetro với thiết kế tinh tế, phù hợp với nhu cầu di chuyển hàng ngày.", image: "images/xe-may-6.jpg" },
+            { id: 7, name: "Mặt Nạ Crocomv7", price: 2000000, description: "Mặt nạ Crocomv7 mang lại phong cách thời thượng cho xe máy.", image: "images/phu-kien-1.jpg" },
+            { id: 8, name: "Kính Rizoma", price: 2000000, description: "Kính Rizoma giúp tăng cường khả năng quan sát và an toàn.", image: "images/phu-kien-2.jpg" },
+            { id: 9, name: "Đĩa KingSpeed", price: 2000000, description: "Đĩa KingSpeed giúp xe chạy mượt mà hơn.", image: "images/phu-kien-3.jpg" },
+            { id: 10, name: "Tay thắng GH-Racing CNC", price: 2000000, description: "Tay thắng GH-Racing với độ bền cao và thiết kế hiện đại.", image: "images/phu-kien-4.jpg" },
+            { id: 11, name: "Tay thắng RCB S3", price: 2000000, description: "Tay thắng RCB S3 là sản phẩm chính hãng, chất lượng tốt.", image: "images/phu-kien-5.jpg" },
+            { id: 12, name: "Bố thắng đĩa trước Elig", price: 2000000, description: "Bố thắng đĩa trước Elig giúp tăng cường hiệu suất phanh.", image: "images/phu-kien-6.jpg" }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = parseInt(params.get('productId'));
+
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            document.getElementById('product-detail').innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+                <p><strong>Giá: ${product.price.toLocaleString()} VNĐ</strong></p>
+                <p>Mô tả: ${product.description}</p>
+                <button onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}')">Thêm vào giỏ hàng</button>
+            `;
+        } else {
+            document.getElementById('product-detail').innerHTML = `
+    <img src="${product.image}" alt="${product.name}">
+    <h2>${product.name}</h2>
+    <p><strong>Giá: ${product.price.toLocaleString()} VNĐ</strong></p>
+    <p>Mô tả: ${product.description}</p>
+    <button onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}')">Thêm vào giỏ hàng</button>
+`;
+
+        }
+        function addToCart(id, name, price, image) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = { id, name, price, image }; // Thêm image vào đối tượng sản phẩm
+
+    const existingProductIndex = cart.findIndex(item => item.id === id);
+    if (existingProductIndex !== -1) {
+        alert("Sản phẩm đã có trong giỏ hàng.");
+    } else {
+        cart.push(product); 
+        localStorage.setItem('cart', JSON.stringify(cart)); 
+        alert("Sản phẩm đã được thêm vào giỏ hàng!");
+    }
+}
+
+    </script>
+</body>
+</html>

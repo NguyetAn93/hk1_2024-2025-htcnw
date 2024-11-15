@@ -1,0 +1,65 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th:nth-child(1), .table td:nth-child(1) {
+    width: 100px; /* Đặt chiều rộng cho cột hình ảnh */
+}
+
+.table th:nth-child(2), .table td:nth-child(2) {
+    width: 300px; /* Đặt chiều rộng cho cột tên sản phẩm */
+}
+
+.table th:nth-child(3), .table td:nth-child(3) {
+    width: 150px; /* Đặt chiều rộng cho cột giá */
+}
+
+.table th:nth-child(4), .table td:nth-child(4) {
+    width: 100px; /* Đặt chiều rộng cho cột hành động */
+}
+
+.cart-item img {
+    width: 50px; /* Kích thước hình ảnh nhỏ hơn */
+    height: auto;
+}
+
+button {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Đặt chiều rộng nút xóa bằng 100% của ô */
+}
+
+button:hover {
+    background-color: #31b0d5;
+}
+
+/* Nút xóa */
+button.remove {
+    background-color: #d9534f; /* Màu đỏ cho nút xóa */
+}
+
+button.remove:hover {
+    background-color: #c9302c; /* Màu đỏ đậm khi hover */
+}
+
+/* Thêm style cho phần thanh toán */
+.checkout-container {
+    text-align: right; /* Căn chỉnh nút thanh toán bên phải */
+    margin-top: 20px; /* Khoảng cách với các sản phẩm */
+}
+
+.total-price {
+    font-weight: bold;
+}
